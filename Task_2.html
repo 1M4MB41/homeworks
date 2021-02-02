@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let arr = [23];
+        let i = 1;
+        let min = 0;
+
+        while (i != null) {
+            filling(n = prompt("Введите значение которое нужно занести в массив: "))
+            if (n == null || n == "") {
+                i = null
+            } else i++;
+        }
+
+        function filling(e) {
+            if (e == null || e == "") {
+                alert("Заполнение массива окончено")
+            } else
+                arr[i] = +e;
+        }
+
+        for (i = 1; i < arr.length; i++) {
+            if (arr[min] < arr[i]) {
+            }else min = i;
+        }
+
+        alert(`Минимальный элемент массива равен: ${arr[min]} его номер: ${min + 1}`);
+
+    </script>
+
+</body>
+
+</html>
