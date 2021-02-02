@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style id="color">
+        #menu {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: auto;
+            text-align: center;
+            background: #000;
+        }
+
+        #menu a {
+            padding: 5px 10px;
+            font-weight: bold;
+            width: auto;
+        }
+
+        #menu li {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Создать меню</h1>
+    <form action="">
+        <fieldset>
+            <label>Пункты меню: <input type="text" name="elemMenu" id="elemMenu"> </label>
+            <br>
+
+            <label>Цвет текста: <input type="color" id="textColor"></label>
+            <br>
+
+            <label>Цвет фона:
+                <input type="color" id="bgColor" value="#24bed9"></label>
+            <br>
+
+            <label>Цвет Hover:
+                <input type="color" id="hoverColor" value="#ed9427"></label>
+            <br>
+
+            <input type="button" name="button" onclick="createMenu(), backColor()" value="Создать меню">
+
+        </fieldset>
+    </form>
+    <br>
+
+    <ul id="menu"></ul>
+
+    <script>
+
+        function createMenu() {
+            let elem = document.getElementById("elemMenu").value;
+            let arr = elem.split(', ');
+            let t = document.getElementById("textColor").value;
+            let i = 1;
+            for (let e of arr) {
+                menu.innerHTML += `<li id="hov${i}" onmouseover="hColor()"><a href="#" style="color: ${t}">${e}</a></li>`;
+                i++;
+            }
+        }
+
+        function backColor() {
+            let b = document.getElementById("bgColor").value;
+            document.querySelector("#menu").style.background = b;
+        }
+
+        function hColor() {
+            for(let j = 1; j <=100; j++){
+                let h = document.getElementById(`hov${j}`);
+                let c = document.getElementById("hoverColor").value;
+                let d = document.getElementById("bgColor").value;
+                h.onmouseover = function () {
+                    h.style.background = c;
+                };
+                h.onmouseleave = function () {
+                    h.style.background = d;
+                }
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
