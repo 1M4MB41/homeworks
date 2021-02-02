@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let x = [0.3, 5.2, 9.4, 8];
+        let y = [43, 5, 3.4, 8, 20];
+        let C = (sumOfArray(x) + sumOfArray(y)) / 2
+
+        function sumOfArray(array) {
+            let sum = 0;
+            for (let j = 0; j < array.length; j++) {
+                sum += array[j]
+            }
+            return sum;
+        }
+        alert(C);
+
+    </script>
+    
+</body>
+</html>
