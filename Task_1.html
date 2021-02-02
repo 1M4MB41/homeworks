@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let n = 0;
+        let i = 0;
+        let arr = [];
+
+        while (i != null) {
+            filling(n = prompt("Введите значение которое нужно занести в массив: "))
+            if (n == null || n == "") {
+                i = null
+            } else i++;
+        }
+
+        function filling(e) {
+            if (e == null || e == "") {
+                alert("Заполнение массива окончено")
+            } else
+                arr[i] = +e;
+        }
+
+        function sumOfArray(array) {
+            let sum = 0;
+            for (let j = 0; j < array.length; j++) {
+                sum += array[j]
+            }
+            return sum;
+        }
+
+        alert(sumOfArray(arr));
+
+    </script>
+
+</body>
+
+</html>
